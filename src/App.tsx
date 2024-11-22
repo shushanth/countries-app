@@ -1,7 +1,8 @@
 import "./App.css";
+import Pages from "./pages/Pages";
 
 const App = () => {
-  return <div className="content">hello react</div>;
+  return <Pages />;
 };
 
 export default App;
