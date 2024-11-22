@@ -1,8 +1,7 @@
 import "./App.css";
-import Pages from "./pages/Pages";
 
 const App = () => {
-  return <Pages />;
+  return <div className="content">countries list app</div>;
 };
 
 export default App;
