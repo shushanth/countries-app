@@ -2,3 +2,4 @@
 
 declare module "countries/Countries";
 declare module "countriesDetails/CountriesDetails";
+declare module "uiComponents/PageBaseLayout";

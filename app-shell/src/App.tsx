@@ -1,13 +1,16 @@
 import { BrowserRouter } from "react-router";
-import "./App.css";
+import "./App.scss";
 import AppRoutes from "./Router/Routes";
+import AppLayout from "./components/appLayout/AppLayout";
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <div className="content">
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
+      <AppLayout>
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </AppLayout>
     </div>
   );
 };

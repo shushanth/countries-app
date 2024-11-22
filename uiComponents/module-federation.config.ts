@@ -2,12 +2,11 @@ import { dependencies } from "./package.json";
 import type { Rspack } from "@rsbuild/core";
 
 export const mfeConfig: Rspack.ModuleFederationPluginOptions = {
-  name: "app-shell",
-  remotes: {
-    countries: "countries@http://localhost:3001/remoteEntry.js",
-    countriesDetails: "countriesDetails@http://localhost:3002/remoteEntry.js",
-    uiComponents: "uiComponents@http://localhost:3003/remoteEntry.js",
+  name: "uiComponents",
+  exposes: {
+    "./PageBaseLayout": "./src/components/layouts/PageBaseLayout.tsx",
   },
+  filename: "remoteEntry.js",
   shared: {
     ...dependencies,
     react: {
@@ -17,6 +16,10 @@ export const mfeConfig: Rspack.ModuleFederationPluginOptions = {
     "react-dom": {
       singleton: true,
       requiredVersion: dependencies["react-dom"],
+    },
+    "styled-components": {
+      singleton: true,
+      requiredVersion: dependencies["styled-components"],
     },
   },
 };
