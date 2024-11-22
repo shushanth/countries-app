@@ -8,8 +8,13 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
+    "@types/react-router": "^5.1.20",
+    "@types/react-router-dom": "^5.3.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-error-boundary": "^4.1.2",
+    "react-router": "^7.0.1",
+    "react-router-dom": "^7.0.1"
   },
   "devDependencies": {
     "@rsbuild/core": "^1.0.19",
