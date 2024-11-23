@@ -4,7 +4,7 @@ import type { Rspack } from "@rsbuild/core";
 export const mfeConfig: Rspack.ModuleFederationPluginOptions = {
   name: "uiComponents",
   exposes: {
-    "./PageBaseLayout": "./src/components/layouts/PageBaseLayout.tsx",
+    "./Components": "./src/index.tsx",
   },
   filename: "remoteEntry.js",
   shared: {
