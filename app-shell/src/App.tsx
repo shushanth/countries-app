@@ -3,6 +3,7 @@ import "./App.scss";
 import AppRoutes from "./Router/Routes";
 import AppLayout from "./components/appLayout/AppLayout";
 import { lazy } from "react";
+import AppNavigation from "./components/appNavigation/AppNavigation";
 
 const PageNavLayout = lazy(() =>
   import("uiComponents/Components").then((m) => ({
@@ -13,16 +14,16 @@ const PageNavLayout = lazy(() =>
 
 const App = (): JSX.Element => {
   return (
-    <div className="content">
-      <AppLayout>
-        <>
-          <PageNavLayout>nav</PageNavLayout>
-          <BrowserRouter>
-            <AppRoutes />
-          </BrowserRouter>
-        </>
-      </AppLayout>
-    </div>
+    <AppLayout>
+      <>
+        <BrowserRouter>
+          <PageNavLayout>
+            <AppNavigation />
+          </PageNavLayout>
+          <AppRoutes />
+        </BrowserRouter>
+      </>
+    </AppLayout>
   );
 };
 

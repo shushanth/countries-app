@@ -22,7 +22,7 @@ const AppRoutes = (): JSX.Element => {
       />
 
       <Route
-        path="/details/:id"
+        path="/details"
         element={
           <ErrorBoundary fallback="something went wrong">
             <Suspense fallback="loading...">
